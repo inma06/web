@@ -1,0 +1,6 @@
+# Toward the top 0.1% developers
+# Cheers~!!
+
+User-agent: *
+
+Allow: /
