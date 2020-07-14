@@ -145,6 +145,7 @@ body {
 }
 
 .youtube-link {
+  font-family: "MaplestoryOTFBold";
   text-decoration: underline;
   color: #b02818;
   font-size: 1.5rem;
