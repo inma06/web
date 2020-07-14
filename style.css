@@ -1,6 +1,6 @@
 body {
   font-family: sans-serif;
-  background-color: #eeeeee;
+  background-color: #ffffff;
 }
 
 .file-upload {
@@ -54,15 +54,29 @@ body {
 }
 
 .image-upload-wrap {
+  object-fit: contain;
+  border-radius: 10px;
+  border: solid 4px #471d2a;
   margin-top: 20px;
-  border: 4px dashed #1fb264;
+  border: 2px dashed #1fb264;
   position: relative;
 }
 
-.image-dropping,
+.upload {
+  width: 20%;
+}
+
+.upload-text {
+  font-size: 2rem;
+}
+
 .image-upload-wrap:hover {
-  background-color: #1fb264;
-  border: 4px dashed #ffffff;
+  object-fit: contain;
+  border-radius: 10px;
+  border: solid 4px #471d2a;
+  margin-top: 20px;
+  border: 2px dashed #1fb264;
+  position: relative;
 }
 
 .image-title-wrap {
@@ -113,4 +127,77 @@ body {
 .remove-image:active {
   border: 0;
   transition: all 0.2s ease;
+}
+
+.nav-distance {
+  padding: 2.1% 7.7%;
+}
+
+.navbar-light .navbar-brand {
+  font-family: "MaplestoryOTFBold";
+  line-height: 1.68;
+  text-align: left;
+  color: #97851d;
+}
+
+@font-face {
+  font-family: "MaplestoryOTFBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.navbar-light .navbar-toggler {
+  border-color: #ffffff;
+}
+
+.section {
+  margin-top: 100px;
+}
+
+.title {
+  text-align: center;
+  line-height: 1.68;
+  color: #97851d;
+  font-family: "MaplestoryOTFBold";
+}
+
+.subtitle {
+  font-family: "MaplestoryOTFBold";
+  text-align: center;
+  line-height: 1.53;
+  color: #97851d;
+}
+
+.youtube-link {
+  text-decoration: underline;
+  color: #b02818;
+  font-size: 1.5rem;
+}
+
+.youtube-link:hover {
+  text-decoration: underline;
+  color: #b02818;
+  font-size: 1.5rem;
+}
+
+.youtube-icon {
+  width: 8%;
+}
+
+.file-upload {
+  padding: 5%;
+  border-radius: 10px;
+  border: solid 0.5px #f6f7fa;
+  background-color: #ffbf00;
+}
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+  .navbar-brand {
+    font-size: 2rem;
+  }
 }

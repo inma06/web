@@ -1,33 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- # Required meta tags -->
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <!-- # Bootstrap CSS -->
     <link rel="stylesheet" href="style.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+
   <body>
-    <div>
-      <h2>얼굴 사진은 판독 용도로만 사용됩니다.</h2>
-      <h3>서버에 저장되지 않습니다.</h3>
-      <h3>1.Start 버튼을 누른다.</h3>
-      <h3>2.얼굴 사진을 업로드 한다.</h3>
-      <h3>3.얼굴평가 버튼을 누른다.</h3>
-    </div>
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light nav-distance">
+      <a class="navbar-brand" href="#">얼평 테스트</a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+    <!--# Nav Bar 끝-->
+    <section class="section">
+      <h1 class="title">인공지능 얼굴평가 테스트</h1>
+      <h2 class="subtitle">내 얼굴은 상위 몇% 일까?</h2>
+    </section>
+
+    <section class="youtube">
+      <div class="container mt-5 youtube-cover">
+        <a
+          href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg"
+          class="youtube-link"
+          >Thanks to 조코딩</a
+        ><img
+          src="img/youtube-icon-3.jpg"
+          alt="youtube-icon"
+          class="youtube-icon"
+        />
+      </div>
+    </section>
+
     <button type="button" onclick="init()">Start</button>
+
+    <!-- 부트스트랩 script 시작 -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <!-- 부트스트랩 script 끝 -->
+
     <script
       class="jsbin"
       src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
     ></script>
-    <div class="file-upload">
-      <button
-        class="file-upload-btn"
-        type="button"
-        onclick="$('.file-upload-input').trigger( 'click' )"
-      >
-        Add Image
-      </button>
-
+    <!-- file upload icon license -->
+    <!-- 아이콘 제작자 
+      <a href="https://www.flaticon.com/kr/authors/becris"
+      title="Becris">Becris</a> from 
+      <a href="https://www.flaticon.com/kr/"
+       title="Flaticon"> www.flaticon.com</a> -->
+    <div class="container file-upload">
       <div class="image-upload-wrap">
         <input
           class="file-upload-input"
@@ -36,7 +96,11 @@
           accept="image/*"
         />
         <div class="drag-text">
-          <h3>Drag and drop a file or select add Image</h3>
+          <img src="img/upload-icon.svg" class="ml-1 mr-1 mt-5 mb-5 upload" />
+          <h2 class="upload-text mb-5 ml-1 mr-1">
+            얼굴 사진을 올려놓거나<br />
+            눌러서 업로드하세요!
+          </h2>
         </div>
       </div>
       <div class="file-upload-content">
