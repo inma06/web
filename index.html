@@ -18,7 +18,7 @@
     <meta name="author" content="아타나시오" />
     <meta property="og:url" content="https://animalface.site" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="동물상 테스트" />
+    <meta property="og:title" content="이쁨 테스트" />
 
     <meta property="og:url" content="https://dev-atanasio.ga" />
     <meta property="og:type" content="website" />
@@ -62,7 +62,7 @@
       <h1 class="title">인공지능 얼굴평가 테스트</h1>
       <h2 class="subtitle">내 얼굴을 평가해줘</h2>
     </section>
-    <h3 class="version-text">@_@ 테스트 버전입니다.</h3>
+    <h3 class="version-text"></h3>
     <!-- 부트스트랩 script 시작 -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -157,7 +157,8 @@
       // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
       // the link to your model provided by Teachable Machine export panel
-      const URL = "https://teachablemachine.withgoogle.com/models/Xr3g4wSl6/";
+      // 학습모델 링크
+      const URL = "https://teachablemachine.withgoogle.com/models/UnaGhF8wy/";
 
       let model, webcam, labelContainer, maxPredictions;
 
@@ -186,21 +187,35 @@
         var image = document.getElementById("face-image");
         const prediction = await model.predict(image, false);
         // 결과값 내림차순 정렬 ( 큰값이 상단에 )
+        // TODO: 도넛 차트로 변경하기
         prediction.sort(
           (a, b) => parseFloat(b.probability) - parseFloat(a.probability)
         );
 
         // 결과값에 따른 문구
+        // TODO : 도넛 차트로 변경
         var resultMsg;
         switch (prediction[0].className) {
-          case "잘생긴":
-            resultMsg = "잘생기셨네요";
+          case "pretty_girl":
+            resultMsg =
+              "청순 가련 당신! <br>닮은 연예인은 김태희! 아이유! 김태리!";
             break;
-          case "못생긴":
-            resultMsg = "못생기셨네요";
+          case "baby_girl":
+            resultMsg = "아기같은 동안 미모! <br>닮은 연예인은 김유정! 서신애!";
+            break;
+          case "gag_girl":
+            resultMsg =
+              "개그력이 넘치는 매력쟁이 당신! <br>닮은 연예인은 장도연 or 이국주?!";
+            break;
+          case "sexy_girl":
+            resultMsg =
+              "매혹적인 섹시함! <br>닮은 연예인은 할리우드 스타 에바그린!";
+            break;
+          case "cool_girl":
+            resultMsg = "남성적인 걸크러쉬 매력!!<br> 당신 혹시 이준기?!";
             break;
           default:
-            resultMsg = "알수없음";
+            resultMsg = "Error!!";
         }
 
         $(".result-message").html(resultMsg);
