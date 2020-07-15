@@ -145,11 +145,11 @@ body {
 
 .version-text {
   font-family: "MaplestoryOTFBold";
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
   margin-bottom: 50px;
   line-height: 1.53;
-  color: #777777;
+  color: #e6a75f;
 }
 .result-message {
   font-family: "MaplestoryOTFBold";
