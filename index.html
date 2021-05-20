@@ -58,10 +58,10 @@
       <h1 class="title">쁘붕 쁘붕</h1>
       <h2 class="subtitle">Fearless Assemble!!</h2>
     </section>
-    <h3 class="version-text">예전에 만들어논 AI모델이라 구린점 미안합니다.</h3>
+    <h3 class="version-text">예전에 만들어논 AI모델이라 구린점 미안합니다 <br> 업데이트 예정 </h3>
     <h3 class="admin-msg-text">
-      안심하세요!! 사진은 서버에 절대 저장되지 않습니다.<br /><br />
-      하단 댓글란에 피드백 부탁드립니다. 개발자에게 힘이 됩니다!
+      사진은 서버에 저장되지 않습니다<br /><br />
+      정면사진, 고해상도 사진이 좀더 정확합니다
     </h3>
     <!-- 부트스트랩 script 시작 -->
     <script
@@ -136,20 +136,7 @@
         </div>
       </div>
     </div>
-<!--     <section class="mb-5 youtube">
-      <div class="container pt-5 mt-5 youtube-cover">
-        <a
-          href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg"
-          class="youtube-link"
-          >Thanks to 조코딩</a
-        ><a href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg"
-          ><img
-            src="img/youtube-icon-3.jpg"
-            alt="youtube-icon"
-            class="youtube-icon"
-        /></a>
-      </div>
-    </section> -->
+
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
     <script type="text/javascript">
@@ -195,27 +182,27 @@
         // 결과값에 따른 문구
         // TODO : 도넛 차트로 변경
         var resultMsg;
-<!--         switch (prediction[0].className) {
+        switch (prediction[0].className) {
           case "pretty_girl":
             resultMsg =
-              "청순 가련 당신! <br>닮은 연예인은 김태희! 아이유! 김태리!";
+              "혹시 유나? 나 단발 좋아하네";
             break;
           case "baby_girl":
-            resultMsg = "아기같은 동안 미모! <br>닮은 연예인은 김유정! 서신애!";
+            resultMsg = "최강 동안";
             break;
           case "gag_girl":
             resultMsg =
-              "개그력이 넘치는 매력쟁이 당신! <br>닮은 연예인은 장도연 or 이국주?!";
+              "은근 개그쟁이";
             break;
           case "sexy_girl":
             resultMsg =
-              "매혹적인 섹시함! <br>닮은 연예인은 할리우드 스타 에바그린!";
+              "섹시 청순 가련";
             break;
           case "cool_girl":
-            resultMsg = "남성적인 걸크러쉬 매력!!<br> 당신 혹시 이준기?!";
+            resultMsg = "암 쏘 쿨쿨";
             break;
           default:
-            resultMsg = "Error!!";
+            resultMsg = "Error!! 개발자 일안하냐";
         } -->
 
         $(".result-message").html(resultMsg);
